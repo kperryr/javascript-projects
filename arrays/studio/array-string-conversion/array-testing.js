@@ -5,6 +5,16 @@ let protoArray4 = "Comma-spaces, might, require, typing, caution";
 
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 
+function check( str ){
+	let check1 = string.inlcudes(",");
+	let check2 = string.includes(";");
+	let check3 = string.includes(" ");
+	
+	let output;
+
+
+}
+
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
