@@ -5,51 +5,68 @@ let protoArray4 = "Comma-spaces, might, require, typing, caution";
 
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 
-function check( str ){
-	let check1 = string.inlcudes(",");
-	let check2 = string.includes(";");
-	let check3 = string.includes(" ");
+function checks(str ="",delimiter ="" ){
+	let output = str.includes(delimiter);
+	return output;
 	
-	let output;
-
-
 }
 
 //2) 
-function reverseCommas() {
+function reverseCommas(str = "") {
 	//TODO: 1. create and instantiate your variables.
-	let check;
+	let check = checks(str,',');
 	let output;
 	//TODO: 2. write the code required for this step
+	
+	if (check){
+		let arr = str.split(",");
+		arr = arr.reverse();
+		output = arr.join(",");
+	}
 
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
 	return output;
 }
 
 //3)
-function semiDash() {
-	let check;
+function semiDash(str = "") {
+	let check = checks(str,';');
 	let output;
 //TODO: write the code required for this step
-
+	
+	if(check){
+		let arr = str.split(";");
+		arr = arr.sort();
+		output = arr.join("-");
+	}
   
 	return output;
 }
 
 //4)
-function reverseSpaces() {
-	let check;
+function reverseSpaces(str = "") {
+	let check = checks(str,' ');
 	let output;
   //TODO: write the code required for this step
-
+	if(check){
+		let arr = str.split(" ");
+		arr = arr.sort().reverse();
+		output = arr.join(" ");
+	}
 	return output;
 }
 
 //5)
-function commaSpace() {
-	let check;
+function commaSpace(str = "") {
+	let check = checks(str,', ');
 	let output;
 	//TODO: write the code required for this step
+	if(check){
+		let arr = str.split(", ");
+		arr = arr.reverse();
+		output = arr.join(",");
+
+	}
   
 	return output;
 }
