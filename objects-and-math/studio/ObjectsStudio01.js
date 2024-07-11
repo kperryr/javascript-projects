@@ -24,9 +24,8 @@ while(randomIDs.length <3){
 
 function buildCrewArray(arrID,arrCandiates){
   let crew = [];
-  for (let i = 0; i< 7; i++){
-      console.log(arrID.includes(arrCandiates.astronautID));
-    if(arrCandiates[i].includes(arrID)){
+  for (let i = 0; i< 6; i++){
+    if(arrID.includes(arrCandiates[i].astronautID)){
       crew.push(arrCandiates[i].name);
     }
   }
