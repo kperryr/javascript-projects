@@ -24,7 +24,7 @@ takeoff.addEventListener('click', event => {
         status.innerHTML = "Shuttle in flight.";
         shuttleBack.style.background = "blue";
         spaceShuttleHeight.innerHTML = 10000;
-        rocket.style.bottom = "10px";
+        //rocket.style.bottom = "10px";
     }
 });
 
@@ -33,7 +33,7 @@ landing.addEventListener('click',event =>{
     status.innerHTML = "The shuttle has landed.";
     shuttleBack.style.background = "green";
     spaceShuttleHeight.innerHTML = 0;
-    rocket.style.bottom = "0px";
+    //rocket.style.bottom = "0px";
 } );
 
 missionAbort.addEventListener('click',event =>{
@@ -42,7 +42,7 @@ missionAbort.addEventListener('click',event =>{
         status.innerHTML = "Mission aborted.";
         shuttleBack.style.background = "green";
         spaceShuttleHeight.innerHTML = 0;
-        rocket.style.bottom = "0px";
+        //rocket.style.bottom = "0px";
     }     
 } );
 
@@ -50,12 +50,13 @@ up.addEventListener('click', event =>{
     let miles = spaceShuttleHeight.innerHTML;
     miles = Number(miles) + 10000;
     spaceShuttleHeight.innerHTML = String(miles);
-
+/* 
     if(rocket.style.bottom =="") {
         rocket.style.bottom = "0px";
-     }
-    let h = rocket.style.bottom;
-    h = parseInt(h)+ 10;
+     } */
+    let h = parseInt(rocket.style.bottom) + 10 +"px";
+    console.log(h);
+    //h = parseInt(h)+ 10;
     rocket.style.bottom = h + "px";
 
 
